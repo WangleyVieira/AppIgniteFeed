@@ -21,5 +21,5 @@ export function App() {
     </div>
   )
 }
-
+//aula 12.. continuação
 // export default App

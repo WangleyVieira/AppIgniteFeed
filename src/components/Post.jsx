@@ -1,13 +1,13 @@
 import { Comment } from './Comment';
 import styles from './Post.module.css';
+import { Avatar } from './Avatar';
 
 export function Post() {
     return (
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img 
-                        className={styles.avatar} 
+                    <Avatar hasBorder={true}
                         src='https://avatars.githubusercontent.com/u/61789985?v=4'
                     />
                     <div className={styles.authorInfo}>
@@ -16,7 +16,7 @@ export function Post() {
                     </div>
                 </div>
 
-                <time title='11 de Maio às 22:23h' datetime="2022-05-11 11:22:30">Publicado há 1h</time>
+                <time title='11 de Maio às 22:23h' dateTime="2022-05-11 11:22:30">Publicado há 1h</time>
             </header>
 
             <div className={styles.content}>
