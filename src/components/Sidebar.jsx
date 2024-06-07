@@ -1,6 +1,15 @@
 //importação do icone
-import { PencilLine } from 'phosphor-react'
+import { PencilLine } from 'phosphor-react';
 import { Avatar } from './Avatar';
+
+import { fetchUrl } from '../services/api';
+
+// async function getMessage() {
+
+//     const data = fetchUrl();
+//     // console.log(data);
+//     return data;
+// }
 
 import styles from './Sidebar.module.css';
 
@@ -19,7 +28,7 @@ export function Sidebar() {
             </div>
 
             <footer>
-                <a href='#'>
+                <a href='' onClick={fetchUrl}>
                     <PencilLine size={20}/>
                     Editar seu perfil
                 </a>
