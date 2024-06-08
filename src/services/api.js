@@ -1,5 +1,5 @@
 // URL da API
-const apiUrl = 'http://localhost:5067/WeatherForecast';
+const apiUrl = 'https://localhost:7085/Mensagem';
 
 export async function fetchUrl() {
   try {
@@ -10,9 +10,6 @@ export async function fetchUrl() {
     }
 
     const data = await response.json();
-    console.log(data);
-    
-    console.log(data);
     
     return data;
 
@@ -21,14 +18,8 @@ export async function fetchUrl() {
   }
 }
 
-async function handleData() {
-  const data = await fetchUrl();
-  console.log('Dados recebidos:', data);
-  // Continue com outras operações nos dados aqui
-}
-
-handleData();
-
 // fetchUrl();
+
+
 
 

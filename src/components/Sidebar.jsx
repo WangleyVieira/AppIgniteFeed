@@ -4,14 +4,22 @@ import { Avatar } from './Avatar';
 
 import { fetchUrl } from '../services/api';
 
-// async function getMessage() {
-
-//     const data = fetchUrl();
-//     // console.log(data);
-//     return data;
-// }
-
 import styles from './Sidebar.module.css';
+
+const getMessage = async (event) => {
+    event.preventDefault();
+    try {
+        const data = await fetchUrl();
+        console.log(data);
+        if (data) {
+            alert(data.texto);
+        } else {
+            alert('Nenhuma mensagem foi retornada.');
+        }
+    } catch (error) {
+        alert('Erro ao buscar a mensagem: ' + error.message);
+    }
+};
 
 export function Sidebar() {
     return (
@@ -28,7 +36,7 @@ export function Sidebar() {
             </div>
 
             <footer>
-                <a href='' onClick={fetchUrl}>
+                <a href='' onClick={getMessage}>
                     <PencilLine size={20}/>
                     Editar seu perfil
                 </a>
